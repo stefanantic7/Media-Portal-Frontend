@@ -48,7 +48,7 @@ gulp.task('copy-node', function(){
   var prefix = "node_modules";
   var files = copytask.map(function(x){return path.join(prefix, x)});
   return gulp.src(files)
-  .pipe(gulp.dest('dist/vendor/'))
+  .pipe(gulp.dest('dist/assets/vendor/'))
 
 });
 gulp.task('copy-assets', function(){
@@ -58,7 +58,7 @@ gulp.task('copy-assets', function(){
 });
 gulp.task('copy-vendor', function(){
   return gulp.src("src/vendor/**/*")
-  .pipe(gulp.dest('dist/vendor/'))
+  .pipe(gulp.dest('dist/assets.vendor/'))
 
 });
 gulp.task('copy-scripts', function(){
