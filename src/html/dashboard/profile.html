@@ -1,0 +1,266 @@
+{% extends "partial/dashboard/app.html" %}
+{% block title %} Profile {% endblock %}
+{% block content %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <div class="card m-auto" style="max-width: 70rem">
+                <div class="card-body px-0 py-2">
+                    <ul class="nav nav-tabs nav-material" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" data-toggle="tab" id="accountsettings-tab" href="#accountsettings" role="tab" aria-controls="accountsettings" aria-selected="true">
+                                <i class="material-icons mr-2">person</i> Account
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" id="pricesettings-tab" href="#pricesettings" role="tab" aria-controls="pricesettings" aria-selected="false">
+                                <i class="material-icons mr-2">euro_symbol</i> Pricing
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="tab-content">
+                        <div class="tab-pane show active" id="accountsettings" role="tabpanel" aria-labelledby="accountsettings-tab">
+                            <div class="d-lg-flex">
+                                <div class="" style="width: 20rem;">
+                                    <div class="p-8">
+                                        <div class="image-with-text ">
+                                            <div class="image">
+                                                <img src="https://image.flaticon.com/icons/png/512/163/163815.png" alt="" class="img-fluid">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div style="flex:1">
+                                    <div class="py-6 px-8 pr-10 border-left">
+                                        <h5 class="font-weight-bold text-secondary mb-6">Personal Details</h5>
+                                        <div class="form-group mb-6">
+                                            <label for="fname">First Name</label>
+                                            <input type="text" class="form-control" value="Stefan" id="fname">
+                                        </div>
+
+                                        <div class="form-group mb-6">
+                                            <label for="lname">Last Name</label>
+                                            <input type="text" class="form-control" value="Antic" id="lname">
+                                        </div>
+
+                                        <div class="form-group mb-6">
+                                            <label for="femail">Email</label>
+                                            <input type="text" class="form-control" value="santic16@raf.rs" id="femail">
+                                        </div>
+
+                                        <div class="form-group mb-6">
+                                            <label for="fphone">Phone</label>
+                                            <input type="text" class="form-control" value="0651234567" id="fphone">
+                                        </div>
+                                    </div>
+                                    <div class="py-6 px-8 pr-10 border-left border-top">
+                                        <h5 class="font-weight-bold text-secondary mb-6">Bio</h5>
+                                        <div class="form-group mb-6">
+                                            <label for="fabout">About You</label>
+                                            <textarea class="form-control" id="fabout"></textarea>
+                                        </div>
+
+
+                                    </div>
+                                    <div class="py-6 px-8 pr-10 border-left border-top">
+                                        <div class="text-right">
+                                            <a href="/dashboard/movies.html" class="btn btn-success mr-4">Save</a>
+                                            <a href="/dashboard/movies.html" class="btn btn-secondary">Cancel</a>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <div class="tab-pane" id="pricesettings" role="tabpanel" aria-labelledby="pricesettings-tab">
+                            <div class="d-lg-flex">
+                                <div style="flex:1">
+                                    <div class="py-6 px-8 pr-10 row">
+                                        <div class="col-md-12 text-center mb-3">
+                                            <h1>Instantly watch TV shows & Movies</h1>
+                                            <div class="form-check">
+                                                <p class="form-text text-muted">Select Your Payment Gateway.</p>
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                                                    <label class="mb-0" for="inlineRadio1">PayPal</label>
+                                                </div>
+                                                <div class="form-check form-check-inline ml-7">
+                                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                                    <label class="mb-0" for="inlineRadio2">PaySera</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <div class="card-feature float-right">
+                                                        <div class="media-box media-box-sm bg-primary text-white">
+                                                            <i class="material-icons">star_border</i>
+                                                        </div>
+                                                    </div>
+                                                    <h5 class="mb-1">
+                                                        Free Trial
+                                                    </h5>
+                                                    <p class="text-secondary">
+                                                        Good for testing
+                                                    </p>
+                                                    <div class="py-1">
+                                                        <h2 class="text-primary mb-0">
+                                                            0.00$
+                                                        </h2>
+                                                        <p class="text-sm text-secondary">Billed Monthly with Annual Commitment</p>
+
+                                                    </div>
+                                                    <div class="py-2">
+                                                        <ul class="block-list text-secondary">
+                                                            <li class="mb-3">
+                                                                <div class="text-lg text-dark">
+                                                                    20
+                                                                </div> Movies & Shows
+                                                                Watch
+                                                            </li>
+                                                            <li class="mb-3">
+                                                                <div class="text-lg text-dark">
+                                                                    100 Hours
+                                                                </div> Download bonus
+                                                            </li>
+                                                            <li class="mb-3">
+                                                                <div class="text-lg text-dark">
+                                                                    24x7
+                                                                </div> Access
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="py-2 mb-1">
+                                                        <a href="/landing/paypal.html" class=" btn btn-primary mr-2 mb-2">Purchase</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <div class="card-feature float-right">
+                                                        <div class="media-box media-box-sm bg-info text-white">
+                                                            <i class="material-icons">star_half</i>
+                                                        </div>
+                                                    </div>
+                                                    <h5 class="mb-1">
+                                                        Starter
+                                                    </h5>
+                                                    <p class="text-secondary">
+                                                        Good for Movies
+                                                    </p>
+                                                    <div class="py-1">
+                                                        <h2 class="text-info mb-0">
+                                                            10.00$
+                                                        </h2>
+                                                        <p class="text-sm text-secondary">Billed Monthly with Annual Commitment</p>
+
+                                                    </div>
+                                                    <div class="py-2">
+                                                        <ul class="block-list text-secondary">
+                                                            <li class="mb-3">
+                                                                <div class="text-lg text-dark">
+                                                                    70
+                                                                </div> Movies & Shows
+                                                                Watch
+                                                            </li>
+                                                            <li class="mb-3">
+                                                                <div class="text-lg text-dark">
+                                                                    500 Hours
+                                                                </div> Download bonus
+                                                            </li>
+                                                            <li class="mb-3">
+                                                                <div class="text-lg text-dark">
+                                                                    24x7
+                                                                </div> Access
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="py-2 mb-1">
+                                                        <a href="/landing/paypal.html" class=" btn btn-info mr-2 mb-2">Purchase</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <div class="card-feature float-right">
+                                                        <div class="media-box media-box-sm bg-success text-white">
+                                                            <i class="material-icons">star</i>
+                                                        </div>
+                                                    </div>
+                                                    <h5 class="mb-1">
+                                                        Premium
+                                                    </h5>
+                                                    <p class="text-secondary">
+                                                        Unlimited Access
+                                                    </p>
+                                                    <div class="py-1">
+                                                        <h2 class="text-success mb-0">
+                                                            15.00$
+                                                        </h2>
+                                                        <p class="text-sm text-secondary">Billed Monthly with Annual Commitment</p>
+
+                                                    </div>
+                                                    <div class="py-2">
+                                                        <ul class="block-list text-secondary">
+                                                            <li class="mb-3">
+                                                                <div class="text-lg text-dark">
+                                                                    Unlimited
+                                                                </div> Movies & Shows
+                                                                Watch
+                                                            </li>
+                                                            <li class="mb-3">
+                                                                <div class="text-lg text-dark">
+                                                                    Unlimited Hours
+                                                                </div> Download bonus
+                                                            </li>
+                                                            <li class="mb-3">
+                                                                <div class="text-lg text-dark">
+                                                                    24x7
+                                                                </div> Access
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="py-2 mb-1">
+                                                        <a href="/landing/paypal.html" class=" btn btn-success mr-2 mb-2">Purchase</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-12 text-center mb-3">
+                                            <p class="form-text text-muted">
+                                                Payment Summary<br>
+
+                                                Your currently selected plan : <strong>Starter</strong>,<br>
+                                                Final Payable Amount: <strong>10.00 USD</strong>
+                                            </p>
+                                        </div>
+                                    </div>
+
+<!--                                    <div class="py-6 px-8 pr-10 border-left border-top">-->
+<!--                                        <div class="text-right">-->
+<!--                                            <button class="btn btn-primary mr-4">Save</button> <button class="btn btn-secondary">Cancel</button>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

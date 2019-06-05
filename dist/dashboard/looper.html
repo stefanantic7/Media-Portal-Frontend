@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="icon" type="image/x-icon" href="../assets/img/favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Mono%7CArvo:400%7CRoboto:300,400,500,700%7CCookie" rel="stylesheet">
+  <link rel="stylesheet" href="../vendor/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
+
+  
+<style>
+
+    .movie {
+        background-color: black;
+    }
+
+    /*
+      ##Device = Laptops, Desktops
+      ##Screen = B/w 1025px to 1280px
+    */
+    @media (min-width: 1025px) {
+        .movie {
+            background-color: black;
+            height: 55vh;
+        }
+    }
+
+    /*
+      ##Device = Low Resolution Tablets, Mobiles (Landscape)
+      ##Screen = B/w 481px to 767px
+    */
+    @media (max-width: 481px) {
+        .movie {
+            height: 30vh;
+        }
+    }
+
+</style>
+
+  <link rel="stylesheet" href="../css/style.min.css">
+  <title>Media Portal</title>
+</head>
+<body>
+  
+<div class="full-page">
+    <div class="sidebar-container">
+        <aside class="sidebar sidebar-left sidebar-fixed sidebar-dark">
+
+    <div class="scroll">
+        <div class="sidebar-header text-white bg-success">
+            <div class="sidebar-brand d-flex justify-content-between align-items-center">
+                <div class="title text-truncate">
+                    Media Portal
+                </div>
+                <div class="logo align-items-center justify-content-around">
+                    <i class="material-icons">all_inclusive</i>
+                </div>
+            </div>
+        </div>
+        <div class="sidebar-nav-container">
+
+            <style>
+                #mobileSearch {
+                    display: none;
+                }
+
+                @media (max-width: 481px) {
+                    #mobileSearch {
+                        display: inline-flex;
+                    }
+                }
+            </style>
+            <div id="mobileSearch" class="input-group add-on m-3 mt-5" style="width: 90%;">
+                <input class="form-control" placeholder="Search" name="srch-term" id="srch-term" type="text">
+                <div class="input-group-btn">
+                    <button onclick="$('#advancedSearch').toggle(); $('.sidebar').removeClass('visible')"
+                            class="btn btn-default p-2" type="submit"><i class="fa fa-search"></i></button>
+                </div>
+            </div>
+
+            <ul class="list-nav sidebar-nav list-nav-dark list-nav-dark-success">
+
+                <li class="list-nav-group-title">
+                    <span>
+                      Dashboard
+                    </span>
+                </li>
+
+                <li class="list-nav-item">
+                    <a href="/dashboard" class="list-nav-link">
+                        <span class="list-nav-icon">
+                          <i class="material-icons">home</i>
+                        </span>
+                        <span class="list-nav-label">Home</span>
+                    </a>
+                </li>
+
+                <li class="list-nav-item">
+                    <a href="/dashboard/movies.html" class="list-nav-link">
+                        <span class="list-nav-icon">
+                            <i class="material-icons">movie</i>
+                        </span>
+                        <span class="list-nav-label">Movies</span>
+                    </a>
+                </li>
+
+                <li class="list-nav-item">
+                    <a href="/dashboard/watchlist.html" class="list-nav-link">
+                        <span class="list-nav-icon">
+                            <i class="material-icons">playlist_play</i>
+                        </span>
+                        <span class="list-nav-label">Watchlist</span>
+                    </a>
+                </li>
+
+                <li class="list-nav-item">
+                    <a href="/dashboard/favorites.html" class="list-nav-link">
+                        <span class="list-nav-icon">
+                            <i class="material-icons">favorite</i>
+                        </span>
+                        <span class="list-nav-label">Favorites</span>
+                    </a>
+                </li>
+                <li class="list-nav-item">
+                    <a href="/dashboard/reviews.html" class="list-nav-link">
+                        <span class="list-nav-icon">
+                            <i class="material-icons">rate_review</i>
+                        </span>
+                        <span class="list-nav-label">Reviews</span>
+                    </a>
+
+                </li>
+            </ul>
+        </div>
+    </div>
+</aside>
+
+    </div>
+    <div class="page">
+        <div class="topbar-container">
+            <nav class="navbar bg-white text-secondary navbar-expand-sm py-0 topbar fixed">
+                <button class="btn btn-flat-secondary btn-sm btn-icon mr-1 no-shadow d-none d-xl-block sidebar-toggle">
+                    <i class="material-icons">menu</i>
+                </button>
+                <button class="btn btn-flat-secondary btn-sm btn-icon mr-1 d-xl-none no-shadow sidebar-hide">
+                    <i class="material-icons">menu</i>
+                </button>
+
+                <div class="navbar-text ml-3 d-none d-sm-block">
+                    <h5 class="m-0 text-dark"> Movie - Looper </h5>
+                </div>
+
+                <div class="d-none d-sm-flex align-items-center">
+                    <input id="searchInput" class="form-control topbar-search border-top-0 border-left-0 border-right-0 "
+                           type="search" placeholder="Search" aria-label="Search">
+                    <a class="nav-link text-center topbar-search-toggle" role="button">
+                        <i class="material-icons">search</i>
+                    </a>
+                    <a onclick="$('#advancedSearch').toggle()" class="dropdown-toggle nav-link text-center" role="button" data-toggle="dropdown"
+                       aria-haspopup="true" aria-expanded="false">
+                    </a>
+                </div>
+                <div class="ml-auto d-sm-flex">
+
+                    <ul class="navbar-nav">
+                        <li class="nav-item dropdown no-caret ml-4">
+                            <a class="text-xs nav-link dropdown-toggle" id="navbarDropdown" role="button"
+                               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <img src="https://image.flaticon.com/icons/png/512/163/163815.png" class="img-thumb-xs mr-1 align-middle"
+                                     alt="">
+                                Stefan Antic
+                                <i class="material-icons">expand_more</i>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right py-0" aria-labelledby="navbarDropdown">
+                                <a href="/dashboard/profile.html" class="dropdown-item empty-link">Profile</a>
+                                <a href="/landing/website.html" class="dropdown-item empty-link">Log out</a>
+                            </div>
+                        </li>
+
+
+                    </ul>
+                </div>
+
+            </nav>
+            <div id="advancedSearch" class="pl-7 pr-7 pt-4 position-absolute" style="display:none; z-index: 999; width: 100%;">
+                <div class="bg-white container" style="border: 2px solid #e8ecf1">
+                    <div class="row pt-3 pb-3">
+                        <div class="col-md-3">
+                            <h5>Type</h5>
+                            <div>
+                                <div class="form-check">
+                                    <label class="form-check-label">
+                                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                                        Movies
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <label class="form-check-label">
+                                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                                        Series
+                                    </label>
+                                </div>
+                                <div class="form-check disabled">
+                                    <label class="form-check-label">
+                                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3">
+                                        TV shows
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <h5>Genre</h5>
+                            <div>
+                                <div class="d-inline-block dropdown">
+                                    <button class="btn btn-outline-success dropdown-toggle" id="dropdemo1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Select a Genre</button>
+                                    <div class="dropdown-menu" aria-labelledby="dropdemo1">
+                                        <button class="dropdown-item">Action</button>
+                                        <button class="dropdown-item">Adventure</button>
+                                        <button class="dropdown-item">Animation</button>
+                                        <button class="dropdown-item">Comedy</button>
+                                        <button class="dropdown-item">Drama</button>
+                                        <button class="dropdown-item">Horror</button>
+                                        <button class="dropdown-item">Romance</button>
+                                        <button class="dropdown-item">Sci-Fi</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <h5>Duration</h5>
+                            <div>
+                                <div class="d-inline-block dropdown">
+                                    <button class="btn btn-outline-primary dropdown-toggle" id="dropdemo2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Select duration</button>
+                                    <div class="dropdown-menu" aria-labelledby="dropdemo2">
+                                        <button class="dropdown-item">Short (< 5 minutes)</button>
+                                        <button class="dropdown-item">Medium (5 - 30 minutes)</button>
+                                        <button class="dropdown-item">Long (> 30 minutes)</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <h5>Average Rating</h5>
+                            <div class="slidecontainer">
+                                <label>1</label>
+                                <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+                                <label>5</label>
+                            </div>
+                        </div>
+                        <div class="col-md-12 text-center">
+                            <button class="btn btn-default" onclick="$('#advancedSearch').hide()">Close</button>
+                            <a class="btn btn-success" href="/dashboard/movies.html">Search</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+        <div class="page-content">
+            
+
+<div class="modal fade" id="addToWatchlistModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Add to watchlist</h4>
+                <button type="button" class="close" aria-label="Close" data-dismiss="modal">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body form-group m-3">
+                <label for="movieList">Select watchlist</label>
+                <select id="movieList" class="form-control">
+                    <option>The Best Movies 2018</option>
+                    <option>Domaci filmovi</option>
+                    <option>Gluposti</option>
+                </select>
+                <br>
+                <a href="#" data-toggle="modal" data-target="#newWatchlistModal"
+                   onclick="$('#addToWatchlistModal').modal('hide');"
+                >Create new watchlist</a>
+            </div>
+            <div class="modal-footer text-center">
+                <button type="button" class="btn btn-success" data-dismiss="modal" onclick="$('#addedMovieAlert').show()">Add</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade" id="newWatchlistModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Create New Watchlist</h4>
+                <button type="button" class="close" aria-label="Close" data-dismiss="modal">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body form-group m-3">
+                <label for="newWatchlistName">Watchlist name</label>
+                <input id="newWatchlistName" type="text" class="form-control">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-success" data-dismiss="modal" onclick="$('#addedMovieAlert').show()">Create</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="trailerModal">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Looper Trailer</h4>
+                <button type="button" class="close" aria-label="Close" data-dismiss="modal">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body form-group m-3">
+                <video class="movie" width="100%" controls>
+                    <source src="https://vjs.zencdn.net/v/oceans.mp4" type="video/mp4">
+                    <source src="https://vjs.zencdn.net/v/oceans.mp4" type="video/ogg">
+                    Your browser does not support HTML5 video.
+                </video>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="container-fluid">
+
+
+    <div class="row">
+        <div class="col-md-9 order-2 order-sm-1 order-md-2">
+            <div class="bg-white"  style="height: 100%;">
+                <div>
+                    <video class="movie" width="100%" controls>
+                        <source src="https://vjs.zencdn.net/v/oceans.mp4" type="video/mp4">
+                        <source src="https://vjs.zencdn.net/v/oceans.mp4" type="video/ogg">
+                        Your browser does not support HTML5 video.
+                    </video>
+                </div>
+                <div class="container mt-2">
+                    <div class="d-inline-block">
+                        <h5 class="">Rate Looper</h5>
+                        <span class="mt-1" style="font-size: 1.2rem">
+                            <i class="material-icons" style="color: #FFCD2A; margin-top: -5px">star_border</i>
+                        </span>
+                        <span class="mt-1" style="font-size: 1.2rem">
+                            <i class="material-icons" style="color: #FFCD2A; margin-top: -5px">star_border</i>
+                        </span>
+                        <span class="mt-1" style="font-size: 1.2rem">
+                            <i class="material-icons" style="color: #FFCD2A; margin-top: -5px">star_border</i>
+                        </span>
+                        <span class="mt-1" style="font-size: 1.2rem">
+                            <i class="material-icons" style="color: #FFCD2A; margin-top: -5px">star_border</i>
+                        </span>
+                        <span class="mt-1" style="font-size: 1.2rem">
+                            <i class="material-icons" style="color: #FFCD2A; margin-top: -5px">star_border</i>
+                        </span>
+                    </div>
+                    <div class="border-top mt-2 pt-2">
+                        <p>
+                            In 2074, when the mob wants to get rid of someone, the target is sent into the past, where a hired gun awaits - someone like Joe - who one day learns the mob wants to 'close the loop' by sending back Joe's future self for assassination.
+                        </p>
+                    </div>
+
+                    <button class="btn btn-warning mb-3" data-toggle="modal" data-target="#trailerModal">Play Trailer</button>
+                    <button id="addToFavorites" class="btn btn-info mb-3" onclick="$('#addToFavorites').hide(); $('#removeFromFavorites').show();">
+                        <span class="mt-1">
+                            <i class="material-icons">thumb_up</i>
+                        </span>
+                        Add to favorites
+                    </button>
+                    <button style="display: none;" id="removeFromFavorites" class="btn btn-info mb-3" onclick="$('#removeFromFavorites').hide(); $('#addToFavorites').show();">
+                        <span class="mt-1">
+                            <i class="material-icons">thumb_down</i>
+                        </span>
+                        Remove from favorites
+                    </button>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="col-md-9 order-4 order-sm-4">
+            <div class="bg-white mt-3 pt-3">
+
+                <div class="container">
+                    <div class="">
+                        <h1>More Like This</h1>
+                        <div class="row">
+                            <div class="col-12 col-lg-3 col-sm-6">
+                                <div class="card" style="">
+                                    <a href="/dashboard/looper.html">
+                                        <img style="" class="card-img-top" src="https://m.media-amazon.com/images/M/MV5BYmViZGM0MGItZTdiYi00ZDU4LWIxNDYtNTc1NWQ5Njc2N2YwXkEyXkFqcGdeQXVyNDk3NzU2MTQ@._V1_UY268_CR2,0,182,268_AL_.jpg" alt="Space Shuttle Launch">
+                                    </a>
+                                    <div class="card-body">
+                                        <div>
+                                            <a style="color: inherit;" href="/dashboard/looper.html">
+                                                <h5 class="card-title d-inline">Limitless</h5>
+                                            </a>
+                                            <span class="pull-right">4.5
+                                                <i class="material-icons" style="color: #FFCD2A; font-size: 1.6rem">star</i>
+                                            </span>
+                                        </div>
+                                        <a href="#" data-toggle="modal" data-target="#addToWatchlistModal">Add to watchlist</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-3 col-sm-6">
+                                <div class="card" style="">
+                                    <a href="/dashboard/looper.html">
+                                        <img style="" class="card-img-top" src="https://m.media-amazon.com/images/M/MV5BMTY0MTc3MzMzNV5BMl5BanBnXkFtZTcwNDE4MjE0NA@@._V1_UX182_CR0,0,182,268_AL_.jpg" alt="Space Shuttle Launch">
+                                    </a>
+                                    <div class="card-body">
+                                        <div>
+                                            <a style="color: inherit;" href="/dashboard/looper.html">
+                                                <h5 class="card-title d-inline">Source Code</h5>
+                                            </a>
+                                            <span class="pull-right">4.6
+                                                <i class="material-icons" style="color: #FFCD2A; font-size: 1.6rem">star</i>
+                                            </span>
+                                        </div>
+                                        <a href="#" data-toggle="modal" data-target="#addToWatchlistModal">Add to watchlist</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-3 col-sm-6">
+                                <div class="card" style="">
+                                    <a href="/dashboard/looper.html">
+                                        <img style="" class="card-img-top" src="https://m.media-amazon.com/images/M/MV5BNmE1OWI2ZGItMDUyOS00MmU5LWE0MzUtYTQ0YzA1YTE5MGYxXkEyXkFqcGdeQXVyMDM5ODIyNw@@._V1_UY268_CR8,0,182,268_AL_.jpg" alt="Space Shuttle Launch">
+                                    </a>
+                                    <div class="card-body">
+                                        <div>
+                                            <a style="color: inherit;" href="/dashboard/looper.html">
+                                                <h5 class="card-title d-inline">I, robot</h5>
+                                            </a>
+                                            <span class="pull-right">4.4
+                                                <i class="material-icons" style="color: #FFCD2A; font-size: 1.6rem">star</i>
+                                            </span>
+                                        </div>
+                                        <a href="#" data-toggle="modal" data-target="#addToWatchlistModal">Add to watchlist</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3 order-2 order-sm-2 order-md-1">
+            <div class="bg-white">
+                <div>
+                    <img style="width: 100%" src="https://m.media-amazon.com/images/M/MV5BMTg5NTA3NTg4NF5BMl5BanBnXkFtZTcwNTA0NDYzOA@@._V1_.jpg">
+                </div>
+                <div class="container mt-1">
+                    <div>
+                        <h1 class="card-title d-inline">Looper</h1>
+                        <span class="pull-right mt-1" style="font-size: 1.3rem">4.6
+                        <i class="material-icons" style="color: #FFCD2A; margin-top: -5px">star</i>
+                    </span>
+                    </div>
+                    <div class="mt-3">
+                        <h5>Release date</h5>
+                        <label>28 September 2012</label>
+
+                        <h5>Duration</h5>
+                        <label>1h 53min</label>
+
+                        <h5>Director</h5>
+                        <label>Rian Johnson</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3 order-3 order-sm-3 order-md-3">
+            <div class="bg-white mt-3 pt-3">
+                <div class="container">
+                    <h3>Reviews</h3>
+
+                    <div class="mb-5">
+                        <div>Stefan Antic</div>
+                        <div class="text-success text-size-4">Contains Spoiler</div>
+                        <p>
+                            To begin, Looper is a sci-fi film set in the future, dealing with the implications of time-travel, although it is very much a film about the past. The film is all about the past, how it affects the present and the future and how it drives people with the majority of the film building characters and establishing plot.
+                        </p>
+                    </div>
+
+                    <div class="pb-2">
+                        <div>Pera Peric</div>
+                        <div class="text-success text-size-4">Contains Spoiler</div>
+                        <p>
+                            Time travel films open up all manner of questions because of the paradoxes every action and reaction produce. If X occurred, surely Y would happen, which means X wouldn't happen after all. And so it is with Looper.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+        </div>
+    </div>
+</div>
+
+  <script src="../vendor/jquery.min.js"></script>
+  <script src="../vendor/popper.min.js"></script>
+  <script src="../vendor/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
+  
+
+<script src="../scripts/sidebar.min.js"></script>
+<script src="../scripts/collapsible-nav.min.js"></script>
+<script src="../vendor/color/color.min.js"></script>
+<script src="../scripts/colors.min.js"></script>
+<script src="../scripts/settings.min.js"></script>
+<script src="../scripts/script.min.js"></script>
+<script>
+    $("#searchInput").on('keyup', function (e) {
+        if (e.keyCode == 13) {
+            window.location.href = "/dashboard/movies.html";
+        }
+    });
+</script>
+
+
+
+
+</body>
+</html>

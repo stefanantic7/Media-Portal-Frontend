@@ -1,0 +1,90 @@
+<aside class="sidebar sidebar-left sidebar-fixed sidebar-dark">
+
+    <div class="scroll">
+        <div class="sidebar-header text-white bg-success">
+            <div class="sidebar-brand d-flex justify-content-between align-items-center">
+                <div class="title text-truncate">
+                    Media Portal
+                </div>
+                <div class="logo align-items-center justify-content-around">
+                    <i class="material-icons">all_inclusive</i>
+                </div>
+            </div>
+        </div>
+        <div class="sidebar-nav-container">
+
+            <style>
+                #mobileSearch {
+                    display: none;
+                }
+
+                @media (max-width: 481px) {
+                    #mobileSearch {
+                        display: inline-flex;
+                    }
+                }
+            </style>
+            <div id="mobileSearch" class="input-group add-on m-3 mt-5" style="width: 90%;">
+                <input class="form-control" placeholder="Search" name="srch-term" id="srch-term" type="text">
+                <div class="input-group-btn">
+                    <button onclick="$('#advancedSearch').toggle(); $('.sidebar').removeClass('visible')"
+                            class="btn btn-default p-2" type="submit"><i class="fa fa-search"></i></button>
+                </div>
+            </div>
+
+            <ul class="list-nav sidebar-nav list-nav-dark list-nav-dark-success">
+
+                <li class="list-nav-group-title">
+                    <span>
+                      Dashboard
+                    </span>
+                </li>
+
+                <li class="list-nav-item">
+                    <a href="/dashboard" class="list-nav-link">
+                        <span class="list-nav-icon">
+                          <i class="material-icons">home</i>
+                        </span>
+                        <span class="list-nav-label">Home</span>
+                    </a>
+                </li>
+
+                <li class="list-nav-item">
+                    <a href="/dashboard/movies.html" class="list-nav-link">
+                        <span class="list-nav-icon">
+                            <i class="material-icons">movie</i>
+                        </span>
+                        <span class="list-nav-label">Movies</span>
+                    </a>
+                </li>
+
+                <li class="list-nav-item">
+                    <a href="/dashboard/watchlist.html" class="list-nav-link">
+                        <span class="list-nav-icon">
+                            <i class="material-icons">playlist_play</i>
+                        </span>
+                        <span class="list-nav-label">Watchlist</span>
+                    </a>
+                </li>
+
+                <li class="list-nav-item">
+                    <a href="/dashboard/favorites.html" class="list-nav-link">
+                        <span class="list-nav-icon">
+                            <i class="material-icons">favorite</i>
+                        </span>
+                        <span class="list-nav-label">Favorites</span>
+                    </a>
+                </li>
+                <li class="list-nav-item">
+                    <a href="/dashboard/reviews.html" class="list-nav-link">
+                        <span class="list-nav-icon">
+                            <i class="material-icons">rate_review</i>
+                        </span>
+                        <span class="list-nav-label">Reviews</span>
+                    </a>
+
+                </li>
+            </ul>
+        </div>
+    </div>
+</aside>

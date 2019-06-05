@@ -1,0 +1,181 @@
+{% extends "partial/dashboard/index.html" %}
+{% block title %} Website {% endblock %}
+{% block app %}
+
+
+<div class="website" id="fullpage">
+
+    <div class="bg-gradient">
+
+        {% include "partial/landing/menu.html" %}
+
+    </div>
+
+    <div class="pt-10 bg-light">
+        <div class="text-center mt-8">
+            <h2 class="mb-4">
+                <span class="d-none d-md-inline">Instantly watch TV shows & Movies</span>
+            </h2>
+            <h4 class="text-secondary font-weight-light mb-6">
+                For one low monthly price
+            </h4>
+        </div>
+    </div>
+
+    <div class="pb-14 border-bottom bg-light" id="features">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 col-lg-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="card-feature float-right">
+                                <div class="media-box media-box-sm bg-primary text-white">
+                                    <i class="material-icons">star_border</i>
+                                </div>
+                            </div>
+                            <h5 class="mb-1">
+                                Free Trial
+                            </h5>
+                            <p class="text-secondary">
+                                Good for testing
+                            </p>
+                            <div class="py-1">
+                                <h2 class="text-primary mb-0">
+                                    0.00$
+                                </h2>
+                                <p class="text-sm text-secondary">Billed Monthly with Annual Commitment</p>
+
+                            </div>
+                            <div class="py-2">
+                                <ul class="block-list text-secondary">
+                                    <li class="mb-3">
+                                        <div class="text-lg text-dark">
+                                            20
+                                        </div> Movies & Shows
+                                        Watch
+                                    </li>
+                                    <li class="mb-3">
+                                        <div class="text-lg text-dark">
+                                            100 Hours
+                                        </div> Download bonus
+                                    </li>
+                                    <li class="mb-3">
+                                        <div class="text-lg text-dark">
+                                            24x7
+                                        </div> Access
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="py-2 mb-1">
+                                <a href="/landing/registration.html" class=" btn btn-primary mr-2 mb-2">Purchase</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="card-feature float-right">
+                                <div class="media-box media-box-sm bg-info text-white">
+                                    <i class="material-icons">star_half</i>
+                                </div>
+                            </div>
+                            <h5 class="mb-1">
+                                Starter
+                            </h5>
+                            <p class="text-secondary">
+                                Good for Movies
+                            </p>
+                            <div class="py-1">
+                                <h2 class="text-info mb-0">
+                                    10.00$
+                                </h2>
+                                <p class="text-sm text-secondary">Billed Monthly with Annual Commitment</p>
+
+                            </div>
+                            <div class="py-2">
+                                <ul class="block-list text-secondary">
+                                    <li class="mb-3">
+                                        <div class="text-lg text-dark">
+                                            70
+                                        </div> Movies & Shows
+                                        Watch
+                                    </li>
+                                    <li class="mb-3">
+                                        <div class="text-lg text-dark">
+                                            500 Hours
+                                        </div> Download bonus
+                                    </li>
+                                    <li class="mb-3">
+                                        <div class="text-lg text-dark">
+                                            24x7
+                                        </div> Access
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="py-2 mb-1">
+                                <a href="/landing/registration.html" class=" btn btn-info mr-2 mb-2">Purchase</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="card-feature float-right">
+                                <div class="media-box media-box-sm bg-success text-white">
+                                    <i class="material-icons">star</i>
+                                </div>
+                            </div>
+                            <h5 class="mb-1">
+                                Premium
+                            </h5>
+                            <p class="text-secondary">
+                                Unlimited Access
+                            </p>
+                            <div class="py-1">
+                                <h2 class="text-success mb-0">
+                                    15.00$
+                                </h2>
+                                <p class="text-sm text-secondary">Billed Monthly with Annual Commitment</p>
+
+                            </div>
+                            <div class="py-2">
+                                <ul class="block-list text-secondary">
+                                    <li class="mb-3">
+                                        <div class="text-lg text-dark">
+                                            Unlimited
+                                        </div> Movies & Shows
+                                        Watch
+                                    </li>
+                                    <li class="mb-3">
+                                        <div class="text-lg text-dark">
+                                            Unlimited Hours
+                                        </div> Download bonus
+                                    </li>
+                                    <li class="mb-3">
+                                        <div class="text-lg text-dark">
+                                            24x7
+                                        </div> Access
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="py-2 mb-1">
+                                <a href="/landing/registration.html" class=" btn btn-success mr-2 mb-2">Purchase</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {% include "partial/landing/footer.html" %}
+
+</div>
+{% endblock %}
+
+
+{% block appscripts %}
+
+{% endblock %}

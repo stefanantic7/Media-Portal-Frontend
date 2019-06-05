@@ -1,0 +1,214 @@
+{% extends "partial/dashboard/app.html" %}
+{% block title %} Movie - Looper {% endblock %}
+{% block styles %}
+<style>
+
+    .movie {
+        background-color: black;
+    }
+
+    /*
+      ##Device = Laptops, Desktops
+      ##Screen = B/w 1025px to 1280px
+    */
+    @media (min-width: 1025px) {
+        .movie {
+            background-color: black;
+            height: 55vh;
+        }
+    }
+
+    /*
+      ##Device = Low Resolution Tablets, Mobiles (Landscape)
+      ##Screen = B/w 481px to 767px
+    */
+    @media (max-width: 481px) {
+        .movie {
+            height: 30vh;
+        }
+    }
+
+</style>
+{% endblock %}
+{% block content %}
+
+{% include "partial/dashboard/watchlist_modals.html" %}
+{% include "partial/dashboard/trailer.html" %}
+
+
+<div class="container-fluid">
+
+
+    <div class="row">
+        <div class="col-md-9 order-2 order-sm-1 order-md-2">
+            <div class="bg-white"  style="height: 100%;">
+                <div>
+                    <video class="movie" width="100%" controls>
+                        <source src="https://vjs.zencdn.net/v/oceans.mp4" type="video/mp4">
+                        <source src="https://vjs.zencdn.net/v/oceans.mp4" type="video/ogg">
+                        Your browser does not support HTML5 video.
+                    </video>
+                </div>
+                <div class="container mt-2">
+                    <div class="d-inline-block">
+                        <h5 class="">Rate Looper</h5>
+                        <span class="mt-1" style="font-size: 1.2rem">
+                            <i class="material-icons" style="color: #FFCD2A; margin-top: -5px">star_border</i>
+                        </span>
+                        <span class="mt-1" style="font-size: 1.2rem">
+                            <i class="material-icons" style="color: #FFCD2A; margin-top: -5px">star_border</i>
+                        </span>
+                        <span class="mt-1" style="font-size: 1.2rem">
+                            <i class="material-icons" style="color: #FFCD2A; margin-top: -5px">star_border</i>
+                        </span>
+                        <span class="mt-1" style="font-size: 1.2rem">
+                            <i class="material-icons" style="color: #FFCD2A; margin-top: -5px">star_border</i>
+                        </span>
+                        <span class="mt-1" style="font-size: 1.2rem">
+                            <i class="material-icons" style="color: #FFCD2A; margin-top: -5px">star_border</i>
+                        </span>
+                    </div>
+                    <div class="border-top mt-2 pt-2">
+                        <p>
+                            In 2074, when the mob wants to get rid of someone, the target is sent into the past, where a hired gun awaits - someone like Joe - who one day learns the mob wants to 'close the loop' by sending back Joe's future self for assassination.
+                        </p>
+                    </div>
+
+                    <button class="btn btn-warning mb-3" data-toggle="modal" data-target="#trailerModal">Play Trailer</button>
+                    <button id="addToFavorites" class="btn btn-info mb-3" onclick="$('#addToFavorites').hide(); $('#removeFromFavorites').show();">
+                        <span class="mt-1">
+                            <i class="material-icons">thumb_up</i>
+                        </span>
+                        Add to favorites
+                    </button>
+                    <button style="display: none;" id="removeFromFavorites" class="btn btn-info mb-3" onclick="$('#removeFromFavorites').hide(); $('#addToFavorites').show();">
+                        <span class="mt-1">
+                            <i class="material-icons">thumb_down</i>
+                        </span>
+                        Remove from favorites
+                    </button>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="col-md-9 order-4 order-sm-4">
+            <div class="bg-white mt-3 pt-3">
+
+                <div class="container">
+                    <div class="">
+                        <h1>More Like This</h1>
+                        <div class="row">
+                            <div class="col-12 col-lg-3 col-sm-6">
+                                <div class="card" style="">
+                                    <a href="/dashboard/looper.html">
+                                        <img style="" class="card-img-top" src="https://m.media-amazon.com/images/M/MV5BYmViZGM0MGItZTdiYi00ZDU4LWIxNDYtNTc1NWQ5Njc2N2YwXkEyXkFqcGdeQXVyNDk3NzU2MTQ@._V1_UY268_CR2,0,182,268_AL_.jpg" alt="Space Shuttle Launch">
+                                    </a>
+                                    <div class="card-body">
+                                        <div>
+                                            <a style="color: inherit;" href="/dashboard/looper.html">
+                                                <h5 class="card-title d-inline">Limitless</h5>
+                                            </a>
+                                            <span class="pull-right">4.5
+                                                <i class="material-icons" style="color: #FFCD2A; font-size: 1.6rem">star</i>
+                                            </span>
+                                        </div>
+                                        <a href="#" data-toggle="modal" data-target="#addToWatchlistModal">Add to watchlist</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-3 col-sm-6">
+                                <div class="card" style="">
+                                    <a href="/dashboard/looper.html">
+                                        <img style="" class="card-img-top" src="https://m.media-amazon.com/images/M/MV5BMTY0MTc3MzMzNV5BMl5BanBnXkFtZTcwNDE4MjE0NA@@._V1_UX182_CR0,0,182,268_AL_.jpg" alt="Space Shuttle Launch">
+                                    </a>
+                                    <div class="card-body">
+                                        <div>
+                                            <a style="color: inherit;" href="/dashboard/looper.html">
+                                                <h5 class="card-title d-inline">Source Code</h5>
+                                            </a>
+                                            <span class="pull-right">4.6
+                                                <i class="material-icons" style="color: #FFCD2A; font-size: 1.6rem">star</i>
+                                            </span>
+                                        </div>
+                                        <a href="#" data-toggle="modal" data-target="#addToWatchlistModal">Add to watchlist</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-3 col-sm-6">
+                                <div class="card" style="">
+                                    <a href="/dashboard/looper.html">
+                                        <img style="" class="card-img-top" src="https://m.media-amazon.com/images/M/MV5BNmE1OWI2ZGItMDUyOS00MmU5LWE0MzUtYTQ0YzA1YTE5MGYxXkEyXkFqcGdeQXVyMDM5ODIyNw@@._V1_UY268_CR8,0,182,268_AL_.jpg" alt="Space Shuttle Launch">
+                                    </a>
+                                    <div class="card-body">
+                                        <div>
+                                            <a style="color: inherit;" href="/dashboard/looper.html">
+                                                <h5 class="card-title d-inline">I, robot</h5>
+                                            </a>
+                                            <span class="pull-right">4.4
+                                                <i class="material-icons" style="color: #FFCD2A; font-size: 1.6rem">star</i>
+                                            </span>
+                                        </div>
+                                        <a href="#" data-toggle="modal" data-target="#addToWatchlistModal">Add to watchlist</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3 order-2 order-sm-2 order-md-1">
+            <div class="bg-white">
+                <div>
+                    <img style="width: 100%" src="https://m.media-amazon.com/images/M/MV5BMTg5NTA3NTg4NF5BMl5BanBnXkFtZTcwNTA0NDYzOA@@._V1_.jpg">
+                </div>
+                <div class="container mt-1">
+                    <div>
+                        <h1 class="card-title d-inline">Looper</h1>
+                        <span class="pull-right mt-1" style="font-size: 1.3rem">4.6
+                        <i class="material-icons" style="color: #FFCD2A; margin-top: -5px">star</i>
+                    </span>
+                    </div>
+                    <div class="mt-3">
+                        <h5>Release date</h5>
+                        <label>28 September 2012</label>
+
+                        <h5>Duration</h5>
+                        <label>1h 53min</label>
+
+                        <h5>Director</h5>
+                        <label>Rian Johnson</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3 order-3 order-sm-3 order-md-3">
+            <div class="bg-white mt-3 pt-3">
+                <div class="container">
+                    <h3>Reviews</h3>
+
+                    <div class="mb-5">
+                        <div>Stefan Antic</div>
+                        <div class="text-success text-size-4">Contains Spoiler</div>
+                        <p>
+                            To begin, Looper is a sci-fi film set in the future, dealing with the implications of time-travel, although it is very much a film about the past. The film is all about the past, how it affects the present and the future and how it drives people with the majority of the film building characters and establishing plot.
+                        </p>
+                    </div>
+
+                    <div class="pb-2">
+                        <div>Pera Peric</div>
+                        <div class="text-success text-size-4">Contains Spoiler</div>
+                        <p>
+                            Time travel films open up all manner of questions because of the paradoxes every action and reaction produce. If X occurred, surely Y would happen, which means X wouldn't happen after all. And so it is with Looper.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+{% endblock %}

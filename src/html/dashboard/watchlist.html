@@ -1,0 +1,195 @@
+{% extends "partial/dashboard/app.html" %}
+{% block title %} Watchlist {% endblock %}
+{% block styles %}
+
+{% endblock %}
+{% block content %}
+
+
+<div class="container-fluid">
+
+    <div class="row">
+        <div class="col-md-3">
+            <div class="bg-white">
+                <div class="container pt-3 pb-3">
+                    <h3>Stefan Antic</h3>
+                    <div class="mb-2">Statistics</div>
+
+                    <div class="row border">
+                        <div class="col-md-4 text-center">
+                            <div class="text-success text-size-7">
+                                1
+                            </div>
+                            <div>Favorites</div>
+                        </div>
+                        <div class="col-md-4 text-center">
+                            <div class="text-success text-size-7">
+                                2
+                            </div>
+                            <div>Watchlist</div>
+                        </div>
+                        <div class="col-md-4 text-center">
+                            <div class="text-success text-size-7">
+                                1
+                            </div>
+                            <div>Ratings</div>
+                        </div>
+                    </div>
+
+                    <div class="mt-3">
+                        <div><strong>Email address</strong></div>
+                        <div>santic16@raf.rs</div>
+                    </div>
+
+                    <div class="mt-3">
+                        <div><strong>Phone</strong></div>
+                        <div>065123456789</div>
+                    </div>
+
+                    <div class="mt-3">
+                        <div><strong>Favorites genres</strong></div>
+                        <div>
+                            Mysteries, Dramas, Trailers
+                        </div>
+                    </div>
+
+                    <div class="mt-3">
+                        <div><strong>About me</strong></div>
+                        <div>Madison is a director of brand marketing, with experience managing global teams and multi-million-dollar campaigns. Her background in brand strategy, visual design, and account management inform her mindful but competitive approach. Madison is fueled by her passion for understanding the nuances of cross-cultural advertising. She considers herself a ‘forever student,’ eager to both build on her academic foundations in psychology and sociology and stay in tune with the latest digital marketing strategies through continued coursework.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-9">
+            <div class="bg-white">
+                <div class="card-body px-2 py-0">
+                    <ul class="nav nav-tabs nav-material" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" data-toggle="tab" id="watchlist-tab" href="#watchlist"
+                               role="tab" aria-controls="watchlist" aria-selected="true">Watchlist</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" id="favorites-tab" href="#favorites" role="tab"
+                               aria-controls="favorites" aria-selected="true">Favorites</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" id="reviews-tab" href="#reviews"
+                               role="tab" aria-controls="reviews" aria-selected="true">Reviews</a>
+                        </li>
+
+                    </ul>
+                    <div class="tab-content">
+                        <div class="tab-pane fade show active" id="watchlist" role="tabpanel"
+                             aria-labelledby="watchlist-tab">
+                            <div class="py-3 px-4 watchlist-item">
+                                <div class="row border">
+                                    <div class="col-md-3 col-sm-4">
+                                        <img class="img-fluid mr-4 mb-4 mb-lg-0" src="https://m.media-amazon.com/images/M/MV5BYzllMjJkODAtYjMwMi00YmNhLWFhYzAtZjZjODg5YzEwOGUwXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SY999_CR0,0,679,999_AL_.jpg" style="width:20rem">
+                                    </div>
+                                    <div class="col-md-9 col-sm-8 pt-3">
+                                        <a href="/dashboard/looper.html" style="color: inherit;">
+                                            <h2>V For Vendeta
+                                                <span class="pull-right">
+                                                    <span class="pull-right">4.4
+                                                        <i class="material-icons" style="color: #FFCD2A;">star</i>
+                                                    </span>
+                                                </span>
+                                            </h2>
+                                        </a>
+
+                                        <div class="mb-5">
+                                            In a future British tyranny, a shadowy freedom fighter, known only by the alias of "V", plots to overthrow it with the help of a young woman.
+                                        </div>
+                                        <div class="d-block position-absolute" style="bottom: 0; right: 15px">
+                                            <a href="#" class="pull-right" onclick="if(confirm('Are you sure?')){$(this).closest('.watchlist-item').remove()}">Remove From Watchlist</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="py-3 px-4 watchlist-item">
+                                <div class="row border">
+                                    <div class="col-md-3 col-sm-4">
+                                        <img class="img-fluid mr-4 mb-4 mb-lg-0" src="https://m.media-amazon.com/images/M/MV5BMTUxMzQyNjA5MF5BMl5BanBnXkFtZTYwOTU2NTY3._V1_.jpg" style="width:20rem">
+                                    </div>
+                                    <div class="col-md-9 col-sm-8 pt-3">
+                                        <a href="/dashboard/looper.html" style="color: inherit;">
+                                            <h2>The Green Mile
+                                                <span class="pull-right">
+                                                    <span class="pull-right">4.8
+                                                        <i class="material-icons" style="color: #FFCD2A;">star</i>
+                                                    </span>
+                                                </span>
+                                            </h2>
+                                        </a>
+                                        <div class="mb-5">
+                                            The lives of guards on Death Row are affected by one of their charges: a black man accused of child murder and rape, yet who has a mysterious gift.
+                                        </div>
+                                        <div class="d-block position-absolute" style="bottom: 0; right: 15px">
+                                            <a href="#" class="pull-right" onclick="if(confirm('Are you sure?')){$(this).closest('.watchlist-item').remove(); $('.watchlist-empty-list').show()}">Remove From Watchlist</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="text-center p-4 watchlist-empty-list" style="display: none">
+                                The list is empty
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="favorites" role="tabpanel" aria-labelledby="favorites-tab">
+                            <div class="py-3 px-4">
+                                <div class="row border">
+                                    <div class="col-md-3 col-sm-4">
+                                        <img class="img-fluid mr-4 mb-4 mb-lg-0" src="https://m.media-amazon.com/images/M/MV5BNDg4NjU3MTYzNl5BMl5BanBnXkFtZTgwNzE2MDU2MjE@._V1_SY1000_CR0,0,707,1000_AL_.jpg" style="width:20rem">
+                                    </div>
+                                    <div class="col-md-9 col-sm-8 pt-3">
+                                        <a href="/dashboard/looper.html" style="color: inherit;">
+                                            <h2>Who Am I
+                                                <span class="pull-right">
+                                                    <span class="pull-right">4.3
+                                                        <i class="material-icons" style="color: #FFCD2A;">star</i>
+                                                    </span>
+                                                </span>
+                                            </h2>
+                                        </a>
+                                        <div class="mb-5">
+                                            Benjamin, a young German computer whiz, is invited to join a subversive hacker group that wants to be noticed on the world's stage.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="tab-pane fade" id="reviews" role="tabpanel" aria-labelledby="reviews-tab">
+                            <div class="py-3 px-4 review-item">
+                                <a href="/dashboard/looper.html" style="color: inherit;">
+                                    <h2>Who Am I
+                                        <span class="pull-right">
+                                                    <span class="pull-right">4.4
+                                                        <i class="material-icons" style="color: #FFCD2A;">star</i>
+                                                    </span>
+                                                </span>
+                                    </h2>
+                                </a>
+                                <p>
+                                    Even though I live in Germany, it's been years since I have watched a German movie. The local cinema and made-for-TV movie market is saturated by cheaply produced romcoms and documentary-style WW2-movies. 'Who Am I' caught my attention with its very different theme. And it turned out being a very enjoyable watch. The first interrogation theme felt a bit overacted and over-directed to me and made me worry if they would try to hard to be "cool and different", but luckily the movie quickly found a good pace and well-balanced direction. It moves at a fast pace, with quite some jumps forth and back in time, but the director keeps it well structured, so that the audience doesn't get lost in the twists and turns. The visual effects are very well done, I especially liked the visuals of the 'dark net', depicting the online interaction between hackers as scenes in an underground train. There are some minor plot holes, and I found myself able to guess some things which would happen next, but the end of the movie will manage to surprise most viewers (now, how often can you say that any more?), and the fast pace and compelling characters (throughout well acted) will keep you hooked. This isn't a groundbreaking movie, but I see good potential for it to draw the attention of an international audience, which hopefully will lead to some more German movies in he near future who also dare to address unusual themes.
+                                </p>
+                                <div class="d-block">
+                                    <a href="#" class="" onclick="if(confirm('Are you sure?')){$(this).closest('.review-item').remove(); $('.reviews-empty-list').show()}">Remove</a>
+                                </div>
+                            </div>
+
+                            <div class="text-center p-4 reviews-empty-list" style="display: none">
+                                The list is empty
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+{% endblock %}

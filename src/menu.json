@@ -1,0 +1,155 @@
+{
+  "menuitems": [
+    {
+      "label": "DASHBOARDS",
+      "isLabel": true
+    },
+    {
+      "path": "../dashboard/",
+      "label": "Dashboard Pro",
+      "icon": { "class": "material-icons", "content": "home" }
+    },
+
+    {
+      "label": "Projects",
+      "icon": { "class": "material-icons", "content": "folder_open" },
+      "children": [
+        { "path": "../projects/single.html", "label": "Project Page" },
+        { "path": "../projects/all.html", "label": "All Projects" }
+      ]
+    },
+    {
+      "path": "../ui/cards.html",
+      "label": "Cards",
+      "icon": { "class": "material-icons", "content": "widgets" }
+    },
+    {
+      "label": "PAGES",
+      "isLabel": true
+    },
+    {
+      "path": "../user/profile.html",
+      "label": "User Profile",
+      "icon": { "class": "material-icons", "content": "person" }
+    },
+    {
+      "path": "../user/timeline.html",
+      "label": "Timeline",
+      "icon": { "class": "material-icons", "content": "timeline" }
+    },
+    {
+      "path": "../email/chat.html",
+      "label": "Chat",
+      "icon": { "class": "material-icons", "content": "chat_bubble_outline" }
+    },
+    {
+      "label": "Commerce",
+      "icon": { "class": "material-icons", "content": "attach_money" },
+      "children": [
+        { "path": "../shop/pricing.html", "label": "Pricing" },
+        { "path": "../shop/invoice.html", "label": "Invoice" }
+
+      ]
+    },
+    {
+      "label": "Login & Signup",
+      "icon": { "class": "material-icons", "content": "https" },
+      "children": [
+        { "path": "../front/login.html", "label": "Login" },
+        { "path": "../front/signup.html", "label": "Signup" },
+        { "path": "../front/lock.html", "label": "Lock" }
+      ]
+    },
+    {
+      "path": "../error/404.html",
+      "label": "404",
+      "icon": { "class": "material-icons", "content": "error_outline" }
+    },
+    {
+      "path": "../front/website.html",
+      "label": "Landing Page",
+      "icon": { "class": "material-icons", "content": "public" }
+    },
+    {
+      "label": "Bonus Pages",
+      "icon": { "class": "material-icons", "content": "pages" },
+      "children": [
+        { "path": "../pages/search.html", "label": "Search Results" },
+        { "path": "../pages/account.html", "label": "Account Settings" }
+
+      ]
+    },
+    {
+      "label": "Email",
+      "icon": { "class": "material-icons", "content": "mail" },
+      "children": [
+        { "path": "../email/inbox.html", "label": "Email Inbox" },
+        { "path": "../email/compose.html", "label": "Email Compose" },
+        { "path": "../email/full.html", "label": "View Email" }
+      ]
+    },
+    {
+      "label": "COMPONENTS",
+      "isLabel": true
+    },
+    {
+      "label": "UI Components",
+      "icon": { "class": "material-icons", "content": "toys" },
+      "children": [
+        { "path": "../ui/buttons.html", "label": "Buttons" },
+        { "path": "../ui/progress.html", "label": "Progress Bars" },
+        { "path": "../ui/nav.html", "label": "Navigation & Tabs" },
+        { "path": "../ui/dropdown.html", "label": "Dropdown" },
+        { "path": "../ui/alert.html", "label": "Alerts" },
+        { "path": "../ui/collapse.html", "label": "Collapse" },
+        { "path": "../ui/tooltip.html", "label": "Tooltips" },
+        { "path": "../ui/accordian.html", "label": "Accordians" },
+        { "path": "../ui/pagination.html", "label": "Pagination" },
+        { "path": "../ui/carousel.html", "label": "Carousel" },
+        { "path": "../ui/modal.html", "label": "Modals" }
+
+      ]
+    },
+    {
+      "label": "Charts",
+      "icon": { "class": "material-icons", "content": "multiline_chart" },
+      "children": [
+        { "path": "../charts/chartjs.html", "label": "Chart.js" },
+        { "path": "../charts/chartist.html", "label": "Chartist" },
+        { "path": "../charts/plotly.html", "label": "Plotly.js" },
+        { "path": "../charts/cthree.html", "label": "C3 Charts" }
+      ]
+    },
+    {
+      "label": "Tables",
+      "icon": { "class": "material-icons", "content": "view_column" },
+      "children": [
+        { "path": "../tables/basic.html", "label": "Basic" },
+        { "path": "../tables/responsive.html", "label": "Responsive Tables" },
+        { "path": "../tables/data.html", "label": "Datatable" }
+      ]
+    },
+    {
+      "label": "Forms",
+      "icon": { "class": "material-icons", "content": "multiline_chart" },
+      "children": [
+        { "path": "../forms/basic.html", "label": "Form Elements" },
+        { "path": "../forms/custom.html", "label": "Custom Elements" },
+        { "path": "../forms/date.html", "label": "Date & Time Picker" },
+        { "path": "../forms/typeahead.html", "label": "Typeahead" }
+      ]
+    },
+    {
+      "path": "../calendar/full.html",
+      "label": "Calendar",
+      "icon": { "class": "material-icons", "content": "event" }
+    },
+    {
+      "label": "Utilities",
+      "icon": { "class": "material-icons", "content": "code" },
+      "children": [
+        { "path": "../utilities/spacing.html", "label": "Box Model" }
+      ]
+    }
+  ]
+}

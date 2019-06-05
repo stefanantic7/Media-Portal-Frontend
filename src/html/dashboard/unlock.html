@@ -1,0 +1,53 @@
+{% extends "partial/dashboard/index.html" %}
+{% block title %} Unlock {% endblock %}
+{% block app %}
+<div class="full-page-container">
+
+    <div class="d-flex flex-row justify-content-center px-4" style="margin-top:9vh" >
+        <div class="card" style="width:26rem;">
+            <div class="card-header py-3  d-flex justify-content-between align-items-center" style="border-bottom: 1px solid #eee;">
+                <h5>Enter Password Continue</h5>
+                <div class="media-box media-box-sm bg-success text-white" style="">
+                    <i class="material-icons">all_inclusive</i>
+                </div>
+            </div>
+            <div class="card-body py-0 px-0">
+                <form class="">
+                    <div class="d-flex align-items-center py-4 px-4" style="border-bottom: 1px solid #eee">
+                        <img src="https://image.flaticon.com/icons/png/512/163/163815.png" alt="" class="img-thumb">
+                        <div class="ml-3">
+                            <h5 class="mb-0">Stefan Antic</h5>
+                            <p class="text-secondary mb-0">santic16@raf.rs</p>
+                        </div>
+
+
+                    </div>
+                    <div class="px-4 py-4">
+                        <div class="form-group mb-4">
+                            <label for="password">New Password</label>
+                            <input type="password" class="form-control" id="password" placeholder="******">
+                        </div>
+                        <div class="form-group mb-4">
+                            <label for="repeatedPassword">Repeat Password</label>
+                            <input type="password" class="form-control" id="repeatedPassword" placeholder="******">
+                        </div>
+                        <div class="py-1">
+                            <button type="submit" class="btn btn-success btn-block ">Submit</button>
+                        </div>
+                        <div class="py-2 px-0">
+                            <p class="mb-0">
+                                <button class=" btn btn-link pl-1">Login with another Account.</button>
+                            </p>
+                        </div>
+                    </div>
+
+
+                </form>
+            </div>
+            <div class="card-footer">
+                <button class=" btn btn-link pl-1">Create Account.</button>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

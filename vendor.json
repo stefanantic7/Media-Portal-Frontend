@@ -1,0 +1,37 @@
+{
+  "files": [
+    "jquery/dist/jquery.min.js",
+    "bootstrap/dist/js/bootstrap.min.js",
+    "hammerjs/hammer.min.js",
+    "moment/min/moment.min.js",
+    "material-design-icons/iconfont/MaterialIcons-Regular.eot",
+    "material-design-icons/iconfont/MaterialIcons-Regular.woff2",
+    "material-design-icons/iconfont/MaterialIcons-Regular.woff",
+    "material-design-icons/iconfont/MaterialIcons-Regular.ttf",
+    "chart.js/dist/Chart.min.js",
+    "d3/d3.min.js",
+    "c3/c3.min.js",
+    "c3/c3.min.css",
+    "popper.js/dist/umd/popper.min.js",
+    "perfect-scrollbar/dist/perfect-scrollbar.min.js",
+    "perfect-scrollbar/css/perfect-scrollbar.css",
+    "font-awesome/**/css/font-awesome.min.css",
+    "font-awesome/**/fonts/*",
+    "medium-editor/dist/css/medium-editor.min.css",
+    "medium-editor/dist/css/themes/beagle.min.css",
+    "dropzone/dist/min/dropzone.min.css",
+    "dropzone/dist/min/dropzone.min.js",
+    "datatables.net-dt/css/jquery.dataTables.css",
+    "fullcalendar/dist/fullcalendar.css",
+    "fullcalendar/dist/fullcalendar.min.js",
+    "plotly.js/dist/plotly.min.js",
+    "medium-editor/dist/js/medium-editor.min.js",
+    "datatables.net/js/jquery.dataTables.js",
+    "hammerjs/hammer.min.js",
+    "chartist/dist/chartist.min.css",
+    "chartist/dist/chartist.min.js",
+    "typeahead.js/dist/typeahead.jquery.min.js"
+
+  ]
+
+}

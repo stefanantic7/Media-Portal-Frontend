@@ -1,0 +1,48 @@
+<div class="modal fade" id="addToWatchlistModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Add to watchlist</h4>
+                <button type="button" class="close" aria-label="Close" data-dismiss="modal">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body form-group m-3">
+                <label for="movieList">Select watchlist</label>
+                <select id="movieList" class="form-control">
+                    <option>The Best Movies 2018</option>
+                    <option>Domaci filmovi</option>
+                    <option>Gluposti</option>
+                </select>
+                <br>
+                <a href="#" data-toggle="modal" data-target="#newWatchlistModal"
+                   onclick="$('#addToWatchlistModal').modal('hide');"
+                >Create new watchlist</a>
+            </div>
+            <div class="modal-footer text-center">
+                <button type="button" class="btn btn-success" data-dismiss="modal" onclick="$('#addedMovieAlert').show()">Add</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade" id="newWatchlistModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Create New Watchlist</h4>
+                <button type="button" class="close" aria-label="Close" data-dismiss="modal">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body form-group m-3">
+                <label for="newWatchlistName">Watchlist name</label>
+                <input id="newWatchlistName" type="text" class="form-control">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-success" data-dismiss="modal" onclick="$('#addedMovieAlert').show()">Create</button>
+            </div>
+        </div>
+    </div>
+</div>

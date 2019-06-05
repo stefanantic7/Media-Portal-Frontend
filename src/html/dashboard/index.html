@@ -1,0 +1,50 @@
+{% extends "partial/dashboard/app.html" %}
+{% block title %} Home {% endblock %}
+{% block content %}
+
+{% include "partial/dashboard/trailer.html" %}
+
+<div class="">
+    <div class="col-md-12">
+        <div class="alert alert-success">
+            You are successfully registered and can start watching!
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">×</span>
+            </button>
+        </div>
+    </div>
+</div>
+<div class="container-fluid">
+
+    <div class="row d-flex bg-white" style="height: 80vh;">
+        <div class="col-md-8 d-flex">
+            <div class="mb-3 mt-3 align-self-center">
+                <div class="">
+                    <h3>SUGGESTED MOVIE</h3>
+                    <h1 class="text-size-11"><strong>Who Am I?</strong></h1>
+                    <i class="material-icons" style="color: #FFCD2A; font-size: 1.6rem">star</i>
+                    <i class="material-icons" style="color: #FFCD2A; font-size: 1.6rem">star</i>
+                    <i class="material-icons" style="color: #FFCD2A; font-size: 1.6rem">star</i>
+                    <i class="material-icons" style="color: #FFCD2A; font-size: 1.6rem">star</i>
+                    <i class="material-icons" style="color: #FFCD2A; font-size: 1.6rem">star_half</i>
+
+                    <p>23. september, 2013. | 1h 42min | Crime, Drama, Mystery</p>
+                    <p class="text-size-7">
+                        Benjamin, a young German computer whiz, is invited to join a subversive hacker group that wants
+                        to be noticed on the world's stage.
+                    </p>
+                    <div class="row col-12">
+                        <a href="/dashboard/looper.html" class="btn btn-success">Watch movie</a>
+                        <button data-toggle="modal" data-target="#trailerModal" class="btn btn-warning ml-3">Play trailer</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-md-4 d-flex">
+            <img style="height: auto; width: 100%; align-self: center;"
+                 src="https://m.media-amazon.com/images/M/MV5BNDg4NjU3MTYzNl5BMl5BanBnXkFtZTgwNzE2MDU2MjE@._V1_.jpg">
+        </div>
+    </div>
+</div>
+{% endblock %}
