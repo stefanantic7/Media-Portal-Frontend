@@ -58,7 +58,7 @@ gulp.task('copy-assets', function(){
 });
 gulp.task('copy-vendor', function(){
   return gulp.src("src/vendor/**/*")
-  .pipe(gulp.dest('dist/assets.vendor/'))
+  .pipe(gulp.dest('dist/assets/vendor/'))
 
 });
 gulp.task('copy-scripts', function(){
