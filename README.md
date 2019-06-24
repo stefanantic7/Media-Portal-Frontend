@@ -2,7 +2,7 @@
 
 Media Portal is an online website for your movie collection.
 
-Used technologies: HTML, SCSS, JQuery
+Used technologies: HTML, SCSS, JQuery, Bootstrap
 
 Example: [https://media-portal-front.herokuapp.com](https://media-portal-front.herokuapp.com/)
 
